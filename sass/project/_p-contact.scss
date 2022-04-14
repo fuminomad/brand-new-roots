@@ -1,0 +1,62 @@
+@use "global" as *;
+.p-contact{
+    margin-top: rem(220);
+    margin-bottom: rem(100);
+    @include mq(md){
+      margin-top: rem(100);
+    }
+    }
+    
+    .p-contact__inner{
+    // padding-top: rem(120);
+    }
+    
+    .p-contact__forms{
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        max-width: rem(720);
+        background: #eee;
+        padding-top: rem(100);
+        
+    }
+    
+    .p-contact__texts{
+      padding-top: rem(50);
+      text-align: center;
+      padding-bottom: rem(50);
+      
+    }
+    
+    .p-contact__text{
+      line-height: 1.75;
+      padding-left: 7%;
+      padding-right: 7%;
+      text-align: center;
+      @include mq(md){
+      text-align: left;
+    
+      }
+    }
+
+    .wpcf7-spinner::before{
+        
+      @include
+       mq(lg){
+           display: none !important;
+              }
+          }
+          .wpcf7-spinner{
+          
+      @include
+       mq(lg){
+          display: none !important;
+           }
+          }
+          .submit-btn{
+          
+      @include
+       mq(lg){
+          text-align: center;
+           }
+          }

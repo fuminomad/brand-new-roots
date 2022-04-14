@@ -1,0 +1,134 @@
+@use "sass:math";
+
+////////////////////
+// インナー幅設定
+////////////////////
+// コンテンツのインナー幅（最も共通の幅が多い部分）
+$inner: 1100px;
+// ※キャンパス幅ではなくインナーの幅を指す
+
+// 余白
+$padding-pc: 25px;
+$padding-sp: 20px;
+// ※PC時：デザインカンプの余白の幅ではない。PC時は通常25pxで大丈夫！
+
+
+////////////////////
+// フォント設定
+////////////////////
+
+$font-family-base: 'Noto Sans JP', sans-serif;
+$second-font-family:  'Lato', sans-serif;
+$catch-copy-font-family: 'M PLUS 1p', sans-serif;
+$font-family-adobe: Noto Sans CJK JP, sans-serif;// ベースフォント
+$font-family-cochin: Cochin,'Noto Sans','Julius Sans One', "メイリオ", "Meiryo", sans-serif; // サブタイトルフォントファミリー,ボタン
+$font-family-title: 'Abril Fatface',筆記体,Meiryo, sans-serif;
+$font-family-reserve: 'Julius Sans One',sans-serif;
+$font-family-catch:'Toppan Bunkyu Midashi Gothic', "メイリオ", "Meiryo",sans-serif;
+$font-family-ubuntu:'Ubuntu', sans-serif;
+$font-family-Montserrat: 'Montserrat', sans-serif;
+$font-size-base: 16px; // ベースフォントサイズ
+$font-weight-base: 400; // ベースフォントウェイト
+$lh: 1.6; // ベース行間
+// ※検証ツールでしっかり反映されているか確認する
+
+body {
+  font-family: $font-family-base;
+}
+
+// フォントウェイト
+$regular: 300;
+$normal: 400;
+$bold: 700;
+
+////////////////////
+// 色の指定
+////////////////////
+
+//色指定（共通性のあるものは出来る限り指定すると良い）
+$background: #F7F7F7; // 背景
+$text-color: #393939; // テキスト色
+$black:hsl(0, 0%, 15%); // ボタン・フッター
+$light-navy:#0D3563;
+$navy:#1D2737;
+$yellow:#F9CE00;
+$white:#ffffff;
+$orange:#F4951E;
+$gray:#EAEAEA;
+$gray-2nd:#B5B3B3;
+$tag:#3C3C3C;
+$border:#707070;
+$white-alpha:rgba($color: $white, $alpha: 0.6);
+$dark-navy:#1D2737;
+// マウスホバー
+$opacity: 0.7; // 透過度
+
+
+////////////////////
+// メディアクエリとブレークポイントの設定
+////////////////////
+
+//ブレイクポイント
+$breakpoints: (
+  sm: 375,
+  md: 767,
+  lg: 1023,
+  inner: strip-unit($inner),
+  xl: 1440,
+);
+
+
+//メディアクエリー
+$mediaquerys: (
+  sm: "screen and (max-width: #{map-get($breakpoints,'sm')}px)",
+  md: "screen and (max-width: #{map-get($breakpoints,'md')}px)",
+  lg: "screen and (max-width: #{map-get($breakpoints,'lg')}px)",
+  inner: "screen and (max-width: #{map-get($breakpoints,'inner')}px)",
+  xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
+);
+
+// @include mq(){}で書くとブレークポイントが反映される（初期値はmd）
+@mixin mq($mediaquery: md) {
+  @media #{map-get($mediaquerys, $mediaquery)} {
+    @content;
+  }
+}
+
+// remへの計算式（16pxを基準としている。10pxを基準とする場合は16を10に変更する）
+@function rem($pixels) {
+  @return math.div($pixels, 16) * 1rem;
+}
+
+
+////////////////////
+// 非表示設定
+////////////////////
+
+//デスクトップのみ表示
+.u-desktop {
+  display: none;
+  @include mq("lg") {
+    display: block;
+  }
+}
+
+//タブレット以下表示
+.u-mobile {
+  @include mq("lg") {
+    display: none;
+  }
+}
+//スマホのみ表示
+.is-sm{
+  display: none;
+  @include mq("sm"){
+    display: block;
+  }
+}
+//pcのみ表示
+.is-pc{
+  display: block;
+  @include mq("md"){
+    display: none;
+  }
+}

@@ -1,0 +1,87 @@
+@use "global" as *;
+/*　ContactForm7のテーブル化レスポンシブ調整　*/
+/*テーブルを親要素の幅いっぱいに伸ばす*/
+.table-res-form {
+    width: 100%;
+}
+/*一行ごとに上ボーダー*/
+.table-res-form tr {
+    border-top: 1px #DDD solid;
+}
+/*一番上の行だけボーダーなし*/
+.table-res-form tr:first-child {
+    border-top: none;
+}
+/*背景色つける*/
+.table-res-form tr {
+    background: #eee;  
+}
+/*thとtd内の余白指定*/
+.table-res-form th, .table-res-form td {
+    padding: 1.5em;
+}
+/*th（項目欄）は30%幅、テキストを右寄せ*/
+.table-res-form th {
+    width: 30%;
+    text-align: right;
+}
+/*「必須」部分のスタイリング*/
+.table-res-form .requied {
+    font-size: 0.8em;
+    color: #FFF;
+    display: inline-block;
+    padding: 0.3em 0.3em 0.2em;
+    background: red;
+    border-radius: 2px;
+}
+/*ここから768px以下の指定*/
+@media only screen and (max-width: 768px) {
+/*thとtdをブロック化して幅100％にして、縦積み*/
+    .table-res-form th, .table-res-form td {
+        width: 100%;
+        display: block;
+    }
+/*th（項目名）欄の不要な余白削除・テキスト左寄せ*/
+    .table-res-form th {
+        padding-bottom: 0;
+        text-align: left;
+    }
+/*不要な最終行の左のthを非表示にする*/
+    .table-res-form .empty {
+        display: none;
+    }
+}
+/*ここまで768px以下の指定---終わり*/
+/*ここから入力欄のスタイル指定*/
+/*各入力フォームスタイリング*/
+.table-res-form input[type="text"], input[type="email"], textarea {
+    border: 1px $navy solid;
+    padding: 0.5em;
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+    width: 90%;
+    @include mq(md){
+        width: 100%;
+    }
+}
+/*入力欄にフォーカスしたら変化*/
+.table-res-form input[type="text"]:focus, input[type="email"]:focus, textarea:focus {
+    background: #EEFFFF;
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5);
+}
+/*送信ボタンスタイリング*/
+.table-res-form input[type="submit"] {
+    border: 1px $navy solid;
+    padding: 0.5em 4em;
+    border-radius: 5px;
+    background: $navy;
+    color: #fff;
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    
+}
+/*送信ボタン・マウスオーバー時スタイリング*/
+.table-res-form input[type="submit"]:hover {
+    background: #006599;
+    box-shadow: none;
+}

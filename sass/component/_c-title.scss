@@ -1,0 +1,24 @@
+@use "global" as *;
+.c-section__title{
+   
+    font-size: rem(48);
+    font-weight: bold;
+    color: $black;
+    text-align: center;
+   line-height: 1.5;
+    
+    @include mq(md){
+       font-size: rem(36); 
+       padding-bottom: 0;
+       padding-top: rem(60);
+    }
+}
+.c-section__title-white{
+    @extend .c-section__title;
+    color: $white;
+}
+.c-section__title-demo{
+    @extend .c-section__title;
+    font-size: rem(36);
+    padding-bottom: 0;
+}

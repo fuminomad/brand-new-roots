@@ -1,0 +1,62 @@
+@use "global" as *;
+.c-btn {
+    display: inline-block;
+    // width: rem(200);
+     padding: rem(22) rem(63);
+      background: $orange;
+      font-size:rem(24);
+      font-family: $font-family-base;
+      text-align: center;
+      text-decoration: none;
+      color: $white;
+      position: relative;
+      transition: all .5s;
+      z-index: 2;
+      overflow: hidden;
+      font-weight: bold;
+      letter-spacing: rem(2);
+      border-radius: rem(100);
+     
+      @include mq(md){
+          padding: rem(14) rem(24);
+          font-size: rem(18);
+          max-width: rem(300);
+        }
+    }
+    .c-btn:hover{
+    transition: all .5s;
+    color: $orange;
+    background-color: $white;
+    }
+    .c-btn__more{
+        @extend .c-btn;
+        font-size: rem(18);
+        padding: rem(14) rem(24);
+        background-color: $navy;
+        pointer-events: auto;
+    }
+
+    .c-btn__more:hover{
+        box-sizing: border-box;
+        color:$white; 
+        background-color: $navy;
+        opacity: .7;
+    }
+    .c-btn__works{
+        @extend .c-btn;
+       padding: 18px 18px;
+        font-size: rem(16);
+    }
+
+    .c-btn__works:hover{
+        background: $orange;
+        color: $white;
+        opacity: .7;
+       ;
+    }
+
+    button{
+        background: $white;
+        border: none;
+      }
+      

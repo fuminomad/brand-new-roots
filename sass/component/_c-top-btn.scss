@@ -1,0 +1,42 @@
+@use "global" as *;
+.c-top-btn{
+    width: rem(45); 
+    height: rem(45);
+    display: block;
+    background-color: $white;
+    text-decoration: none;
+    opacity: 1;
+    position: relative;
+    &:hover{
+        background-color: $black; 
+        transition: all .3s; 
+    }
+}
+
+.c-top-btn__white{
+    padding: rem(16.5) rem(10.5);  
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	display: block;
+	transition: .4s ease-in-out;
+}
+.c-top-btn__black{
+    padding: rem(16.5) rem(10.5);  
+    position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+	display: block;
+	transition: .4s ease-in-out;
+    opacity: 0;
+}
+.c-top-btn__white:hover{
+    opacity: 0;
+    }
+.c-top-btn__black:hover{
+    opacity: 1;
+    }

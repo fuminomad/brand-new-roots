@@ -1,0 +1,137 @@
+@use "global" as *;
+.l-page-works{
+    margin-top: rem(100);
+    
+    }
+    .p-works__image{
+        padding-bottom: rem(80);
+    }
+  
+    
+    .p-works__figure{
+       position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        height: rem(300);
+       background: url(../../assets/img/archive.jpg)no-repeat center center /cover;
+    }
+    
+    .p-works__title{
+     color: $white !important;
+    
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50% , -50%);
+    }
+    
+    .p-page-works__inner{
+    width: 90%;
+    max-width: rem(1080);
+    // padding-left: 12.5%;
+    // padding-right: 12.5%;
+    margin: 0 auto;
+    }
+    .p-page-works__cards{
+        display: flex;
+        flex-wrap: wrap;
+        padding-top: rem(62);
+        @include mq(md){
+         padding-top: rem(50);
+        }
+    }
+    
+    .works-cards{
+        width: calc(33.3% - 40px * 2 / 3);
+        margin-left: rem(40);
+        margin-bottom: rem(80);
+       background: $white;
+       padding-bottom: rem(30);
+       
+        @include mq(md){
+            
+        width: 100%;
+        margin-left: rem(14);
+        margin-bottom: rem(59.2);
+        }
+    }
+    .works-cards:nth-child(3n + 1){
+        margin-left: 0;
+        @include mq(md){
+            // margin-left: rem(14);
+        }
+        }
+        .works-cards:nth-child(odd){
+         @include mq(md){
+          margin-left: 0;
+         }
+        }
+        .works-cards:nth-child(n + 4){
+            margin-bottom: rem(60);
+            @include mq(md){
+                margin-bottom: rem(30);
+            }
+        }
+    .works-card{
+        display: flex;
+        @include mq(md){
+            display: block;
+        }
+    }
+    
+    .works-card__image{
+    height: 100%;
+    width: 100%;
+    }
+    
+    .works-card__figure{
+        padding-top: 100%;
+        position: relative;
+        // @include mq(md){
+        // padding-top: 160 / 160 * 100%;
+        // }
+    }
+    .works-card__figure img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    
+    .works-card__text{
+    display: inline-block;
+    
+    }
+    
+    .works-card__tag{
+        font-family: $font-family-base;
+        font-size: rem(20);
+        line-height: 1.15;
+        padding: rem(1.4) rem(13);
+        background: $navy;
+        color: $white;
+       
+        text-align: center;
+    }
+    .works-card__title{
+        font-family: $font-family-base;
+        text-align: center;
+        padding-top: rem(30);
+    }
+    .works-card__text{
+        font-family: $font-family-base;
+    }
+    
+    .works-card__url{
+       color: orange; 
+       font-weight: bold;
+       text-align: center;
+    }
+    .work__card-basic{
+        text-align: center;
+        padding-top: rem(10);
+    }
