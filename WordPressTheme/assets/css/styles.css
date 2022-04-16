@@ -909,9 +909,21 @@ select {
   font-size: 20px;
   font-size: 1.25rem;
   line-height: 1.15;
-  padding: 1.4px 13px;
-  padding: 0.0875rem 0.8125rem;
+  padding: 2.4px 13px;
+  padding: 0.15rem 0.8125rem;
   background: #1D2737;
+  color: #ffffff;
+  text-align: center;
+}
+
+.works-card__tag--2nd {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.15;
+  padding: 2.4px 13px;
+  padding: 0.15rem 0.8125rem;
+  background: #F4951E;
   color: #ffffff;
   text-align: center;
 }
@@ -1204,6 +1216,81 @@ button {
 
 .c-top-btn__black:hover {
   opacity: 1;
+}
+
+.p-about-404 {
+  padding-top: 140px;
+  padding-top: 8.75rem;
+  padding-bottom: 140px;
+  position: relative;
+  background: #1D2737;
+}
+@media screen and (max-width: 767px) {
+  .p-about-404 {
+    padding: 3.75rem 0;
+  }
+}
+
+.p-about-404__inner {
+  text-align: center;
+}
+
+.p-about-404__texts {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin: 0 auto;
+}
+
+.p-about-404::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.about-404__text {
+  padding-top: 100px;
+  padding-top: 6.25rem;
+  text-align: center;
+  color: #ffffff;
+  font-size: 24px;
+  font-size: 1.5rem;
+  width: 100%;
+  max-width: 1100px;
+  padding-left: 50px;
+  padding-right: 50px;
+  line-height: 1.75;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  .about-404__text {
+    font-size: 1.25rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 37.5rem;
+    padding-top: 3.75rem;
+  }
+}
+
+.about-404__text span {
+  font-weight: bold;
+  color: #F9CE00;
+}
+
+.is-pc {
+  display: block;
+}
+@media screen and (max-width: 767px) {
+  .is-pc {
+    display: none;
+  }
+}
+
+.p-about-404__btn {
+  margin-top: 30px;
+  margin-top: 1.875rem;
 }
 
 .p-about {
@@ -1930,8 +2017,6 @@ button {
 .p-service {
   padding-top: 140px;
   padding-top: 8.75rem;
-  padding-bottom: 140px;
-  padding-bottom: 8.75rem;
 }
 @media screen and (max-width: 767px) {
   .p-service {
@@ -2065,6 +2150,13 @@ button {
   max-width: 67.5rem;
   margin: 0 auto;
   position: relative;
+  padding-top: 140px;
+  padding-top: 8.75rem;
+}
+@media screen and (max-width: 767px) {
+  .p-works-wp {
+    padding-top: 6.25rem;
+  }
 }
 
 .p-works-wp__cards {

@@ -1,0 +1,66 @@
+@use "global" as *;
+.p-about-404{
+   
+    padding-top: rem(140);
+    padding-bottom: 140px;
+    position: relative;
+    background: $navy;
+   
+    @include mq(md){
+    padding: rem(60) 0;
+    }
+    }
+
+    .p-about-404__inner{
+         text-align: center;
+        }
+
+    .p-about-404__texts{
+        padding-top: 100px;
+        padding-bottom: 100px;
+       margin: 0 auto;
+      }
+
+    .p-about-404::after{
+        content: ' ';
+        // background-color: rgba(0,0,0,.4);
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    .about-404__text{
+    padding-top: rem(100);
+    text-align: center;
+    color: $white;
+    font-size: rem(24);
+    width: 100%;
+    max-width: 1100px;
+    padding-left: 50px;
+    padding-right: 50px;
+    line-height: 1.75;
+    margin: 0 auto;
+    @include mq(md){
+        font-size: rem(20);
+        padding-left: 20px;
+        padding-right: 20px;
+        max-width: rem(600);
+        padding-top: rem(60);
+    }
+    }
+    .about-404__text span{
+        font-weight: bold;
+        // color: $orange;
+        color: $yellow;
+    }
+    .is-pc{
+        display: block;
+        @include mq(md){
+            display: none;
+        }
+    }
+
+    .p-about-404__btn{
+        margin-top: rem(30);
+    }

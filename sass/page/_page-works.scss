@@ -111,8 +111,18 @@
         font-family: $font-family-base;
         font-size: rem(20);
         line-height: 1.15;
-        padding: rem(1.4) rem(13);
+        padding: rem(2.4) rem(13);
         background: $navy;
+        color: $white;
+       
+        text-align: center;
+    }
+    .works-card__tag--2nd{
+        font-family: $font-family-base;
+        font-size: rem(20);
+        line-height: 1.15;
+        padding: rem(2.4) rem(13);
+        background: $orange;
         color: $white;
        
         text-align: center;

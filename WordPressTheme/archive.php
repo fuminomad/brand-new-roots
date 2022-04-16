@@ -11,6 +11,7 @@
     <div class="p-page-works__cards">
     <?php if(have_posts()): ?>
     <?php while(have_posts()):the_post(); ?>
+    <?php if( has_tag('demo') ) : ?>
     <div class="p-page-works__card-item works-cards">
       <a href="" class="works-card">
           <div class="works-card__image">
@@ -33,6 +34,30 @@
           </div>
       </a>
     </div>
+    <?php else: ?>
+        <div class="p-page-works__card-item works-cards">
+      <a href="" class="works-card">
+          <div class="works-card__image">
+              <figure class="works-card__figure">
+               <img src="<?php the_post_thumbnail_url('full'); ?>" alt="制作実績">
+              </figure>
+          </div>
+          <div class="works-card__texts">
+              <div class="works-card__text">
+                <p class="works-card__tag--2nd">
+                <?php the_tags('');?> 実案件 
+                </p>
+              </div>
+              <h4 class="works-card__title">
+              <?php the_title();?> 
+              </h4>
+              <p class="works-card__text">
+              <?php the_content(); ?>
+              </p>
+          </div>
+      </a>
+    </div>
+<?php endif; ?>
     <?php endwhile; ?>
     <?php endif; ?>
 </div>
