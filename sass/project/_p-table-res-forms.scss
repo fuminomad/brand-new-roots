@@ -1,5 +1,5 @@
 @use "global" as *;
-/*　ContactForm7のテーブル化レスポンシブ調整　*/
+/*ContactForm7のテーブル化レスポンシブ調整*/
 /*テーブルを親要素の幅いっぱいに伸ばす*/
 .table-res-form {
     width: 100%;
@@ -14,7 +14,7 @@
 }
 /*背景色つける*/
 .table-res-form tr {
-    background: #eee;  
+    // background: #eee;  
 }
 /*thとtd内の余白指定*/
 .table-res-form th, .table-res-form td {

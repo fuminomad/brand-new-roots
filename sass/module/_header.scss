@@ -1,21 +1,21 @@
 @use "global" as *;
 
-.l-header{
-    z-index: 10000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: rem(100);
-    width: 100%;
-    background: $background;
-    padding: 0 rem(40);
-    // display: none;
-   background: $white;
-    @include mq(md){
-        height: rem(80);
-        padding: 0 rem(30);
-    }
-  }
+// .l-header{
+//     z-index: 10000;
+//     // position: fixed;
+//     top: 0;
+//     left: 0;
+//     height: rem(100);
+//     width: 100%;
+//     background: $background;
+//     padding: 0 rem(40);
+//     // display: none;
+//    background: $white;
+//     @include mq(md){
+//         height: rem(80);
+//         padding: 0 rem(30);
+//     }
+//   }
   
     
   
@@ -24,6 +24,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    right: 0;
     height: rem(100);
     width: 100%;
    @include mq(sm){
@@ -119,7 +120,7 @@
     transform-origin: left top;
     transition: transform .5s;
      @include mq(md){
-     width: rem(100);
+     width: rem(75);
      }
     }
     &:hover::after {
@@ -131,7 +132,7 @@
         .menu-item:nth-child(n + 2):not(:nth-child(n + 5)){
           a{
             &:after{
-            width: rem(132);   
+            width: rem(90);   
                 }
             }
         }
@@ -141,7 +142,7 @@
           a{
             &:after{
            @include mq(md){
-           width: rem(180);   
+           width: rem(85);   
            }     
                 }
             }
@@ -164,6 +165,7 @@
      position: fixed;
      top: 0;
      left: 0;
+     right: 0;
      width: 100%;
      height: 100%;
      z-index: 99;
@@ -193,11 +195,11 @@
       font-size: rem(24);
       text-align: center;
       line-height: 1.35;
-      padding-left: rem(30);
-      padding-right: rem(30);
+      padding-left: rem(20);
+      padding-right: rem(20);
       border-left: 2px solid $gray-2nd;
       @include mq(md){
-          font-size: rem(16);
+          font-size: rem(13);
       }
   }
   
@@ -207,10 +209,18 @@
   .p-header-nav__items ul li a:hover{
    opacity: .7;
   }
+  #menu-item-142 a:after {
+    content: '私たちについて';
+    display: block;
+    font-size: rem(13);
+  }
+  #menu-item-14 a:hover:after{
+  opacity: .7;
+  }
   #menu-item-14 a:after {
     content: 'サービス';
     display: block;
-    font-size: rem(16);
+    font-size: rem(13);
   }
   #menu-item-14 a:hover:after{
   opacity: .7;
@@ -218,7 +228,7 @@
   #menu-item-40 a:after {
     content: '制作実績';
     display: block;
-    font-size: rem(16);
+    font-size: rem(13);
   }
   #menu-item-40 a:hover:after{
     opacity: .7;
@@ -226,7 +236,7 @@
   #menu-item-16 a:after {
     content: 'お問い合わせ';
     display: block;
-    font-size: rem(16);
+    font-size: rem(13);
   }
   #menu-item-16 a:hover:after{
     opacity: .7;
@@ -234,27 +244,27 @@
   #menu-item-57 a:after {
     content: 'ご挨拶';
     display: block;
-    font-size: rem(16);
+    font-size: rem(13);
   }
   #menu-item-57 a:hover:after{
     opacity: .7;
       }
-      .l-header{
-        z-index: 10000;
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: rem(100);
-        width: 100%;
-        background: $background;
-        padding: 0 rem(40);
-        // display: none;
-       background: $white;
-        @include mq(sm){
-            height: rem(80);
-            padding: 0 rem(30);
-        }
-    }
+    //   .l-header{
+    //     z-index: 10000;
+    //     position: fixed;
+    //     top: 0;
+    //     left: 0;
+    //     height: rem(100);
+    //     width: 100%;
+    //     background: $background;
+    //     padding: 0 rem(40);
+    //     // display: none;
+    //    background: $white;
+    //     @include mq(sm){
+    //         height: rem(80);
+    //         padding: 0 rem(30);
+    //     }
+    // }
 
     .p-header_hamburger{
       position: relative;
@@ -309,3 +319,4 @@
         transform: translateY(50%) rotate(-45deg);
       }
     }
+

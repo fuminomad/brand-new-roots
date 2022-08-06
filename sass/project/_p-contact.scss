@@ -1,12 +1,39 @@
 @use "global" as *;
 .p-contact{
-    margin-top: rem(220);
-    margin-bottom: rem(100);
+    padding-top: rem(80);
+    padding-bottom: rem(200);
+    position: relative;
     @include mq(md){
-      margin-top: rem(100);
+      padding-bottom: rem(120);
+      padding-top: rem(60);
     }
     }
-    
+    .p-contact::after{
+      position: absolute;
+      width: 100vw;
+      height: 12vw;
+      top: 0;
+      left: 0;
+      content: "";
+      background: url(../img/contact-us.png)no-repeat center center / contain;
+      @include mq(md){
+      background: url(../img/contact-us-sp.png)no-repeat center center / contain;
+        height: 24vw;
+        }
+    }
+    .p-contact::before{
+      position: absolute;
+      width: 100vw;
+      height: 12vw;
+      bottom: 0;
+      left: 0;
+      content: "";
+      background: url(../img/contact-bottom.png)no-repeat center center / contain;
+      @include mq(md){
+        background: url(../img/contact-bottom-sp.png)no-repeat center center / contain;
+          height: 24vw;
+          }
+    }
     .p-contact__inner{
     // padding-top: rem(120);
     }
@@ -16,7 +43,7 @@
         margin-right: auto;
         width: 90%;
         max-width: rem(720);
-        background: #eee;
+        // background: #eee;
         padding-top: rem(100);
         
     }

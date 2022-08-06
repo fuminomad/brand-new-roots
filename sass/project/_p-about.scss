@@ -1,39 +1,158 @@
 @use "global" as *;
 .p-about{
-    margin-top: 140px;
-    padding-top: rem(140);
-    padding-bottom: 140px;
+    // margin-top: 140px;
+    padding-top: rem(100);
+    padding-bottom: rem(100);
     position: relative;
-    background: $navy;
-   
+    // background: $gray-3rd;
     @include mq(md){
     padding: rem(60) 0;
     }
     }
+ .p-about__block{
+     position: relative;
+ }   
+ .p-about__block::before{
+        position: absolute;
+        width: 25.46875vw;
+        height: 24.58333vw;
+       bottom: -10vw;
+        right: 0;
+        content: "";
+        background: url(../img/about-4.png)no-repeat center center / contain;   
+     
+    //   @include mq(xl){
+    //     width: 20vw;
+    //     height: 20vw;
+    //     top: -10vw;   
+    //    }
+    //    @include mq(lg){
+    //     width: 38vw;
+    //     height: 38vw;
+    //     top: -20vw;   
+    //    }
+      @include mq(md){
+       width: 45vw;
+       height: 45vw;
+       bottom: -20vw;   
+      }
+    //   @include mq(sm){
+    //    width: 60vw;
+    //    height: 60vw;
+    //    top: -30vw;   
+    //   }
+    }
+    .p-about__block::after{
+        position: absolute;
+        width: 9.375vw;
+        height: 26.04166vw;
+        bottom: 0;
+        right: 0;
+        content: "";
+        background: url(../img/about-3.png)no-repeat center center / contain;;     
+    z-index: -1;
+    @include mq(md){
+        width: 18.75vw;
+        height: 52.08332vw;
+        }
+    }
 
+    .p-about::before{
+        position: absolute;
+        width: 25.46875vw;
+        height: 24.58333vw;
+        top: -10vw;
+        left: 0;
+        content: "";
+        background: url(../img/scroll.png)no-repeat center center / contain;   
+      z-index: 10;
+      @include mq(xl){
+        width: 20vw;
+        height: 20vw;
+        top: -10vw;   
+       }
+       @include mq(lg){
+        width: 38vw;
+        height: 38vw;
+        top: -20vw;   
+       }
+      @include mq(md){
+       width: 60vw;
+       height: 60vw;
+       top: -30vw;   
+      }
+      @include mq(sm){
+       width: 60vw;
+       height: 60vw;
+       top: -30vw;   
+      }
+    }
+    .p-about::after{
+        position: absolute;
+        width: 9.375vw;
+        height: 26.04166vw;
+        top: 0;
+        left: 0;
+        content: "";
+        background: url(../img/about-2.png)no-repeat center center / contain;;     
+    z-index: -1;
+    @include mq(md){
+        width: 18.75vw;
+        height: 52.08332vw;
+        }
+    }
     .p-about__inner{
          text-align: center;
         }
+    .p-about__title{
+     margin-top: rem(70);
+     font-size: rem(36);
+     display: inline-block;
+     position: relative; 
+     font-weight: $bold;  
+    }
+    .p-about__title::after{
+        position: absolute;
+  content: "";
+  
+  position: absolute;
+  width: rem(300);
+  height: rem(80);
+  top: -70%;
+  left: rem(-200);
+  content: "";
+  background: url(../img/about.png) no-repeat center center / contain;
+  
+  z-index: 100;
 
-    .p-about__texts{
-        padding-top: 100px;
+@include mq(md){
+   height: rem(70);
+   width: rem(255);
+//    top: rem(-65);
+   left: -50%;
+   top: -45%;
+    
+}
+}
+ .p-about__texts{
+       
         padding-bottom: 100px;
        margin: 0 auto;
       }
 
-    .p-about::after{
-        content: ' ';
-        // background-color: rgba(0,0,0,.4);
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-    }
+    // .p-about::after{
+    //     content: ' ';
+    //     // background-color: rgba(0,0,0,.4);
+    //     position: absolute;
+    //     top: 0;
+    //     right: 0;
+    //     bottom: 0;
+    //     left: 0;
+    // }
     .about__text{
     padding-top: rem(100);
-    text-align: center;
-    color: $white;
+    text-align: left;
+    color: $black;
     font-size: rem(24);
     width: 100%;
     max-width: 1100px;
@@ -42,7 +161,7 @@
     line-height: 1.75;
     margin: 0 auto;
     @include mq(md){
-        font-size: rem(20);
+        font-size: rem(16);
         padding-left: 20px;
         padding-right: 20px;
         max-width: rem(600);

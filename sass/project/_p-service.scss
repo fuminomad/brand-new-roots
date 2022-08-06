@@ -1,6 +1,10 @@
 @use "global" as *;
 .p-service{
-    padding-top: rem(140);
+    padding-top: rem(100);
+    // background: $gray-3rd;
+    position: relative;
+    padding-bottom: rem(140);
+    overflow: hidden;
    @include mq(md){
     padding-top: rem(40);
     }
@@ -17,3 +21,19 @@
         padding-right: $padding-sp;
         }
         }
+
+        .p-service::before{
+            content:"";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            
+            /*ここで三角形のサイズを決める。必ず幅100vwにして、ブラウザサイズいっぱいにしてください。*/
+            border-width: 80px 100vw 0 0;
+           
+            /*transparentで余分な線を消す*/
+            border-color: transparent $white transparent  transparent ;
+          }

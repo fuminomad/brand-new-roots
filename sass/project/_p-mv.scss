@@ -1,10 +1,9 @@
 @use "global" as *;
 .p-mv{
     width: 100%;
-    
     padding-top: rem(180);
-    
-    background: $navy;
+    background: url(../img/mv-bg.png) no-repeat center center / cover;
+    // background: $navy;
    height: 100vh;
     overflow: hidden;
     @include mq(md){
@@ -19,8 +18,11 @@
 }
 @media screen and (max-width: 1100px){
   .p-mv{
-    padding-top: rem(240)
-  }
+    padding-top: rem(240);
+    @include mq(sm){
+      padding-top: rem(160);
+    }
+    }
   }
   
 .mv-container{
@@ -34,9 +36,36 @@
     height: 100%; 
     }
 }
+// .mv-container::after{
+//   position: absolute;
+//   content: "";
+  
+//   position: absolute;
+//   width: rem(300);
+//   height: rem(132);
+//   top: 12%;
+//   left: 5%;
+//   content: "";
+//   background: url(../img/roots.png) no-repeat center center / contain;
+  
+//   z-index: 100;
+//   @include mq(xl){
+//     top: 12%;
+// }
+// @include mq(lg){
+//     top: 4%;
+//     left: 7%;
+  
+// }
+// @include mq(md){
+//     left: 1%;
+//     top: 20%;
+    
+// }
+// }
 .mv__wrapper{
     height: auto;
-    width: 61.9%;
+    width: 80.9%;
     margin-left: auto;
     margin-right: 0;
    
@@ -95,39 +124,68 @@
 }
 .p-mv__wrapper{
     position: absolute;
-    top: 26%;
-    left: 15%;
-   overflow: hidden;
+    top: 30%;
+    left: 7%;
+  //  overflow: hidden;
     text-align: left;
     z-index: 10;
     display: inline-block;
     @include mq(xl){
-        top: 18%;
+        top: 30%;
     }
     @include mq(lg){
-        top: 10%;
+        top: 28%;
         left: 15%;
     }
     @include mq(md){
         left: 5%;
-        top: 15%;
+        top: 38%;
     }
     
  
 }
 .p-mv__texts{
- 
+position: relative;
    
+}
+.p-mv__texts::after{
+  position: absolute;
+  content: "";
+  
+  position: absolute;
+  width: rem(300);
+  height: rem(80);
+  top: rem(-70);
+  left: rem(0);
+  content: "";
+  background: url(../img/roots.png) no-repeat center center / contain;
+  
+  z-index: 100;
+//   @include mq(xl){
+//     top: 12%;
+// }
+// @include mq(lg){
+//     top: 4%;
+//     left: 7%;
+  
+// }
+@include mq(md){
+   height: rem(70);
+   width: rem(255);
+   top: rem(-65);
+   left: rem(-10);
+    
+}
 }
 .p-mv__title{
     font-family: $font-family-base;
-    color: $white;
-   
+    color: $black;
+    position: relative;
     font-size: rem(40);
-    text-shadow: 2px  2px 3px $black,
-            -2px  2px 3px $black,
-             2px -2px 3px $black,
-            -2px -2px 3px $black;
+    // text-shadow: 2px  2px 3px $black,
+    //         -2px  2px 3px $black,
+    //          2px -2px 3px $black,
+    //         -2px -2px 3px $black;
   /*アニメーションの設定*/
   animation:fadeIn 0.1s 0.5s; 
   animation-fill-mode: both;
@@ -152,13 +210,17 @@
       font-size: rem(24);
     }
 }
+
 .p-mv__title span{
     display: block;
     position: relative;
     padding: rem(0) rem(20);
-    margin-bottom: rem(8);
+    margin-bottom: rem(4);
     }
     .p-mv__title span:first-child{
+        display: inline-block;
+    }
+    .p-mv__title span:last-child{
         display: inline-block;
     }
 .p-mv__title span:before{
@@ -167,8 +229,8 @@
     left: 0;
     top: 0;
     height: 100%;
-    background-color:$yellow;
-   
+    background-color:$white;
+  
     /*アニメーションの設定*/
     animation: secondaryImageOverlayIn .8s 0s cubic-bezier(.77,0,.175,1),
                secondaryImageOverlayOut .8s .8s cubic-bezier(.77,0,.175,1);
@@ -223,6 +285,12 @@
     }
     50% {
       transform: translateX(100%);
+     
+    }
+    75% {
+      transform: translateX(50%);
+     background: transparent;
+    
     }
     100% {
       transform: translateX(0%);
@@ -244,6 +312,19 @@
   .swiper-slide-duplicate-active .slide-img,
   .swiper-slide-prev .slide-img{
     animation: zoomUp 10s linear 0s 1 normal both;  
+  }
+  .swiper-slide{
+    position: relative;
+  }
+  .swiper-slide::after{
+    position: absolute;
+    width: 100%;
+    height:100%;
+    top: 0;
+    left: 0;
+    content: "";
+    background:rgba(29, 39, 55, 0.1);
+    
   }
   
   //imgタグだと下に隙間ができるのでblockに。

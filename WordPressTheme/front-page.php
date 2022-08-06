@@ -5,17 +5,17 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <div class="slide-img">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/img/mv.jpg" width="867" height="500" alt="メインビジュアル">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/img/mv1.jpg" width="867" height="500" alt="メインビジュアル">
           </div>
         </div>
         <div class="swiper-slide">
           <div class="slide-img">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/img/mv-2.jpg" width="867" height="500" alt="メインビジュアル">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/img/mv2.jpg" width="867" height="500" alt="メインビジュアル">
           </div>
         </div>
         <div class="swiper-slide">
           <div class="slide-img">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/img/mv-4.jpg" width="867" height="500" alt="メインビジュアル">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/img/mv4.jpg" width="867" height="500" alt="メインビジュアル">
           </div>
         </div>
       </div>
@@ -23,18 +23,45 @@
     <div class="p-mv__wrapper">
       <div class="p-mv__texts">
         <h1 class="p-mv__title">
-          <span>WEBサイトで</span> <span>貴社のビジネスが</span><span>更に根付いていく</span>
+          <span>WEBサイトで</span> <span>ビジネスチャンスが</span><span>拡大していく</span>
         </h1>
       </div>
     </div>
   </div>
 </section>
-
+<section class="p-about l-about" id="about">
+  <div class="p-about__block">
+  
+  
+  <div class="passing">
+    <div class="passing-box">
+      <div class="passing-bar">
+        <h2 class="passing-txt">About<span>私たちについて</span></h2>
+       
+      </div>
+    </div>
+  </div>
+  <div class="p-about__inner">
+    <div class="p-about__title">
+      Webサイトで<br class="is-md">課題を解決
+    </div>
+    <div class="p-about__texts">
+      <p class="about__text">
+      はじめまして、私は神奈川県を拠点にホームページ制作を行っております。
+      課題を解決するデザイン、ホームページ制作を行っております。
+      個人事業主として制作を行っている為、担当者が変わる事なくお客様に寄り添った
+      サービスを心掛けています。また制作会社様よりリーズナブルな料金で制作できます。
+      </p>
+    </div>
+  </div>
+  </div>
+  </div>
+</section>
 <section class="p-service l-service l-section" id="service">
   <div class="passing">
     <div class="passing-box">
       <div class="passing-bar">
-        <h2 class="passing-txt">Service</h2>
+        <h2 class="passing-txt">Service<span>サービス</span></h2>
       </div>
     </div>
   </div>
@@ -42,14 +69,13 @@
     <div class="p-cards">
       <div class="p-card js-fadeUp">
         <div class="p-card__img">
-          <figure class="p-card__figure">
-            <img src="<?php echo get_template_directory_uri() ?>/assets/img/design.jpg" loading="lazy" width="600" height="400" alt="仕事内容">
+          <figure class="p-card__figure p-card__figure-1st">
+            <img src="<?php echo get_template_directory_uri() ?>/assets/img/site.jpg" loading="lazy" width="600" height="400" alt="仕事内容">
           </figure>
         </div>
         <div class="p-card__texts">
-          <div class="p-card__title">ホームページ制作</div>
-          <p class="p-card__text">世界シェアトップのwordpressを使用したWEBサイトを制作致します。<br class="u-tab">(基本的なセキュリティー対策を含む
-            )<br>1サイト 100,000円〜<br>ランディングページ 75,000円〜
+          <div class="p-card__title p-card__title-01">ホームページ制作</div>
+          <p class="p-card__text">ヒアリングをしっかりと行い、課題解決を目的としたオリジナルデザインのホームページを制作致します。<br class="u-tab">1サイト 200,000円〜<br>ランディングページ 125,000円〜
           </p>
         </div>
       </div>
@@ -61,21 +87,21 @@
         </figure>
       </div>
       <div class="p-card__texts p-card__texts-2nd">
-        <div class="p-card__title">保守・運用</div>
-        <p class="p-card__text">WEBサイトは作ってからが始まりです。<br class="u-tab">24時間、365日働いてくれる営業マンです！
-          WEBサイト公開後、低価格での保守・運用も承っております。
+        <div class="p-card__title p-card__title-02">デザイン</div>
+        <p class="p-card__text">Figma・Adobe XDでのデザインデータを作成いたします。<br class="u-tab">バナーデザインも取り扱っております。
+          
         </p>
       </div>
     </div>
     <div class="p-card js-fadeUp">
       <div class="p-card__img">
-        <figure class="p-card__figure">
+        <figure class="p-card__figure p-card__figure-3rd">
           <img src="<?php echo get_template_directory_uri() ?>/assets/img/update.jpg" loading="lazy" width="600" height="400" alt="仕事内容">
         </figure>
       </div>
       <div class="p-card__texts">
-        <div class="p-card__title">コーディング</div>
-        <p class="p-card__text">デザインデータからのコーディング業務も承っております。<br>HTML / CSS / Sass /  jQuery /  JavaScript / WordPress /Adobe XD / photoshop / git / gulp
+        <div class="p-card__title p-card__title-03">コーディング</div>
+        <p class="p-card__text">デザインデータからのコーディング業務も承っております。<br>HTML / CSS / Sass /  jQuery / WordPress / Figma /Adobe XD / photoshop / git / gulp
         </p>
       </div>
     </div>
@@ -83,10 +109,13 @@
 </section>
 
 <section class="p-works-wp l-works-wp" id="works">
+  <div class="p-works-wp__block">
+
+  
   <div class="passing">
     <div class="passing-box">
       <div class="passing-bar">
-        <h2 class="passing-txt">Works</h2>
+        <h2 class="passing-txt">Works<span>制作実績</span></h2>
       </div>
     </div>
   </div>
@@ -114,7 +143,7 @@
           <div class="works-card__texts works-wp__texts">
             <div class="works-card__text">
             <p class="works-card__tag--2nd">
-                <?php the_tags('');?> 実案件 
+                <?php the_tags('');?> コーディング実績 
                 </p>
             </div>
             <h4 class="works-card__title">
@@ -131,9 +160,10 @@
     wp_reset_postdata(); // $postをグローバル変数に戻す
     ?>
   </div>
+  </div>
 </section>
 
-<section class="p-works l-works">
+<!-- <section class="p-works l-works">
   <div class="passing">
     <div class="passing-box">
       <div class="passing-bar">
@@ -189,19 +219,19 @@
     <div class="p-works__btn">
       <a class="c-btn__more" href="/category/archive/">一覧表示</a>
     </div>
-</section>
+</section> -->
 
-<section class="p-about l-about" id="about">
-  <div class="passing">
+<section class="p-message l-message" id="message">
+  <div class="passing passing-message">
     <div class="passing-box">
       <div class="passing-bar">
-        <h2 class="passing-txt passing-txt-white">Message</h2>
+        <h2 class="passing-txt passing-txt-white">Message<span>ご挨拶</span></h2>
       </div>
     </div>
   </div>
-  <div class="p-about__inner">
-    <div class="p-about__texts">
-      <p class="about__text">
+  <div class="p-message__inner">
+    <div class="p-message__texts">
+      <p class="message__text">
         屋号の<span>ウェブルーツ</span> にはホームページ制作を通じてお客様のビジネスが<br class="is-pc"><span>更に根付いていく役割</span> を担っていきたいという想いがあります。<br class="is-pc">貴社の課題をしっかり把握し、Web制作・Web集客のご提案をいたしますので、<br class="is-pc">まずは一度お問い合わせ頂ければ幸いです！
       </p>
     </div>
@@ -215,7 +245,7 @@
       <div class="passing">
         <div class="passing-box">
           <div class="passing-bar">
-            <h2 class="passing-txt">Contact</h2>
+            <h2 class="passing-txt">Contact<span>お問い合わせ</span></h2>
           </div>
         </div>
       </div>

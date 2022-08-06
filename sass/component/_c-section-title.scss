@@ -52,7 +52,14 @@
 	top: 0;
 	z-index: 1;
 	/* 任意の値 */
-	background: $yellow;
+	background: $white;
+	
+}
+.passing-message .passing-bar:before {
+	background: $navy;
+}
+.passing-gray .passing-bar:before {
+	background: $gray-3rd;
 }
 .passing .passing-txt {
 	opacity: 0;
@@ -80,4 +87,14 @@
 
 .passing-txt-white{
     color: $white;
+}
+
+.passing-bar span{
+ font-size: rem(14);
+ padding-left: rem(10);
+
+}
+.about-subtitle{
+	font-size: rem(14);
+	
 }

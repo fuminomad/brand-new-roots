@@ -1,16 +1,56 @@
 @use "global" as *;
 .p-works-wp{
     width: 90%;
-max-width: rem(1080);
-margin: 0 auto;
+    width: 100%;
+
+// margin: 0 auto;
 position: relative;
 padding-top: rem(140);
+padding-bottom: rem(140);
 @include mq(md){
     padding-top: rem(100);
+    padding-bottom: rem(70);
     }
 }
+.p-works-wp::before{
+    position: absolute;
+        width: 15vw;
+        height: 30vw;
+       top: -10vw;
+        left: 0;
+        content: "";
+        background: url(../img/works-1.png)no-repeat center center / contain;    
+       overflow: hidden;
+       z-index: 10;
+       @include mq(md){
+        width: 25vw;
+        height: 50vw;
+        top: -20vw;
+           }
+    }
+.p-works-wp::after{
+    position: absolute;
+        width: 15vw;
+        height: 7.5vw;
+       bottom: 0;
+        right: 0;
+        content: "";
+        background: url(../img/works-2.png)no-repeat center center / contain;    
+       overflow: hidden;
+       @include mq(md){
+        width: 25vw;
+        height: 12.5vw;
+        
+           }
+    }
+.p-works-wp__block{
+    margin: 0 auto;
+    width: 90%;
+    max-width: rem(1080);
+}
+
 .p-works-wp__cards{
-    padding-top: rem(100);
+    padding-top: rem(50);
     display: flex;
     @include mq(md){
         display: block;
@@ -27,7 +67,9 @@ padding-top: rem(140);
         
     width: 100%;
     margin-left: rem(14);
+    margin: 0 auto;
     margin-bottom: rem(59.2);
+    padding: 0 rem(15);
     }
 }
 .p-works-wp__card-item{
@@ -39,4 +81,7 @@ padding-top: rem(140);
 }
 .works-wp__cards:first-of-type{
     margin-left: 0 
+}
+.works-card__texts{
+    text-align: center;
 }

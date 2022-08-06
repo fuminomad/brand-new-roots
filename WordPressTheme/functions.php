@@ -34,9 +34,12 @@ add_action( 'after_setup_theme', 'my_setup' );
  */
 function my_script_init()
 {
-
+   //グーグルフォントとかの読み込み
+	wp_enqueue_style('my-font', '//fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap');
+	wp_enqueue_style('my-font', '//fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+	wp_enqueue_style('my-font', '//use.typekit.net/mif1kmx.css');
 	wp_enqueue_style( 'swiper', get_template_directory_uri() . '/assets/css/swiper-bundle.min.css', array(), '7.0.0','all' );
-	wp_enqueue_style( 'my', get_template_directory_uri() . '/assets/css/styles.css', array(), '1.0.4', 'all' );
+	wp_enqueue_style( 'my', get_template_directory_uri() . '/assets/css/styles.css', array(), '1.1.7', 'all' );
 	
 	wp_enqueue_script( 'inview', get_template_directory_uri() .  '/assets/js/jquery.inview.min.js', array( 'jquery' ), null,true );
     wp_enqueue_script( 'swiper', get_template_directory_uri() .  '/assets/js/swiper-bundle.min.js', array( 'jquery' ),'7.0.0' ,true );
@@ -152,3 +155,4 @@ function my_excerpt_more( $more ) {
 
 }
 add_filter( 'excerpt_more', 'my_excerpt_more' );
+

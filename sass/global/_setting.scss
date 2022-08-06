@@ -27,6 +27,7 @@ $font-family-reserve: 'Julius Sans One',sans-serif;
 $font-family-catch:'Toppan Bunkyu Midashi Gothic', "メイリオ", "Meiryo",sans-serif;
 $font-family-ubuntu:'Ubuntu', sans-serif;
 $font-family-Montserrat: 'Montserrat', sans-serif;
+$font-family-Shelby: Shelby, sans-serif;
 $font-size-base: 16px; // ベースフォントサイズ
 $font-weight-base: 400; // ベースフォントウェイト
 $lh: 1.6; // ベース行間
@@ -56,10 +57,14 @@ $white:#ffffff;
 $orange:#F4951E;
 $gray:#EAEAEA;
 $gray-2nd:#B5B3B3;
+$gray-3rd:#EEEEEE;
 $tag:#3C3C3C;
 $border:#707070;
 $white-alpha:rgba($color: $white, $alpha: 0.6);
 $dark-navy:#1D2737;
+$light-navy:rgba(29, 39, 55, 0.7);
+$navy-grad: linear-gradient( #334055, #1D2737);
+$navy-grad-2: linear-gradient( 45deg,#4D6182, #1D2737);
 // マウスホバー
 $opacity: 0.7; // 透過度
 
@@ -122,6 +127,13 @@ $mediaquerys: (
 .is-sm{
   display: none;
   @include mq("sm"){
+    display: block;
+  }
+}
+// タブレット以下
+.is-md{
+  display: none;
+  @include mq("md"){
     display: block;
   }
 }

@@ -6,73 +6,73 @@
 .p-card{
     position: relative;
     display: flex;
-    padding-bottom: rem(95);
+    padding-bottom: rem(120);
     @include mq(md){
         flex-direction: column; 
         margin: 0 auto;
         max-width: rem(600);  
        }
 }
-.p-card:nth-of-type(odd)::after{
-position: absolute;
-line-height: 1;
-font-size: rem(80);
--webkit-background-clip: text;
-color: $white;
-top: -8%;
-left: 0;
-text-shadow: 2px  2px 3px $black,
--2px  2px 3px $black,
- 2px -2px 3px $black,
--2px -2px 3px $black;
-font-family:$second-font-family;
-font-weight: bold;
-font-style: italic;
-@include mq(md){
- top: -5%;  
- font-size: rem(60); 
-}
-@include mq(sm){
+// .p-card:nth-of-type(odd)::after{
+// position: absolute;
+// line-height: 1;
+// font-size: rem(80);
+// -webkit-background-clip: text;
+// color: $white;
+// top: -8%;
+// left: 0;
+// text-shadow: 2px  2px 3px $black,
+// -2px  2px 3px $black,
+//  2px -2px 3px $black,
+// -2px -2px 3px $black;
+// font-family:$second-font-family;
+// font-weight: bold;
+// font-style: italic;
+// @include mq(md){
+//  top: -5%;  
+//  font-size: rem(60); 
+// }
+// @include mq(sm){
  
- font-size: rem(50); 
-}
-}
-.p-card:nth-of-type(even)::after{
-    position: absolute;
-    line-height: 1;
-    font-size: rem(70);
-    -webkit-background-clip: text;
-    top: -8%;
-    right: 0%;
-    color: $white;
+//  font-size: rem(50); 
+// }
+// }
+// .p-card:nth-of-type(even)::after{
+//     position: absolute;
+//     line-height: 1;
+//     font-size: rem(70);
+//     -webkit-background-clip: text;
+//     top: -8%;
+//     right: 0%;
+//     color: $white;
    
-    text-shadow: 2px  2px 3px $black,
-    -2px  2px 3px $black,
-    2px -2px 3px $black,
-    -2px -2px 3px $black;
-    font-family: $second-font-family;
-    font-weight: bold;
-    font-style: italic;
-    @include mq(md){
-        top: -5%;  
-        font-size: rem(60); 
-       }
-       @include mq(sm){
+//     text-shadow: 2px  2px 3px $black,
+//     -2px  2px 3px $black,
+//     2px -2px 3px $black,
+//     -2px -2px 3px $black;
+//     font-family: $second-font-family;
+//     font-weight: bold;
+//     font-style: italic;
+//     @include mq(md){
+//         top: -5%;  
+//         font-size: rem(60); 
+//        }
+//        @include mq(sm){
         
-        font-size: rem(50); 
-       } 
+//         font-size: rem(50); 
+//        } 
   
-}
-.p-card:first-of-type::after{
-    content: "wordpress";
-}
-.p-card:nth-of-type(2)::after{
-    content: "maintenance";
-}
-.p-card:nth-of-type(3)::after{
-    content: "coding";
+// }
+// .p-card:first-of-type::after{
+//     content: "wordpress";
+// }
+// .p-card:nth-of-type(2)::after{
+//     content: "maintenance";
+// }
+// .p-card:nth-of-type(3)::after{
+//     content: "coding";
     
-}
+// }
 
 .p-card:nth-of-type(2){
     flex-direction: row-reverse;
@@ -113,7 +113,7 @@ font-style: italic;
     position: absolute;
     width: 100%;
     height: 100%;
-    background: $navy;
+    background: $navy-grad;
     top: 9%;
     left: -6%;
     z-index: -1;
@@ -121,12 +121,43 @@ font-style: italic;
         top: -9%;
     }
 }
+.p-card__figure-1st::before{
+    position: absolute;
+    font-family: $font-family-Shelby;
+    color: $yellow;
+    font-size: rem(60);
+    bottom: -15%;
+    right: 5%;
+    content: "Web-Site";
+    z-index: 100;
+}
+.p-card__figure-3rd::before{
+    position: absolute;
+    font-family: $font-family-Shelby;
+    color: $yellow;
+    font-size: rem(60);
+    bottom: -15%;
+    right: 5%;
+    content: "Coding";
+    z-index: 100;
+}
+.p-card__figure-2nd::before{
+    position: absolute;
+    font-family: $font-family-Shelby;
+    color: $yellow;
+    font-size: rem(60);
+    bottom: -15%;
+    left: 5%;
+    content: "Design";
+    z-index: 100;
+}
+
 .p-card__figure-2nd:after{
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    background: $navy;
+    background: $navy-grad;
     top: 9%;
     left: 6%;
     z-index: -1;
@@ -156,6 +187,7 @@ color: $black;
 .p-card__title{
     font-size: rem(36);
     line-height: rem(36);
+    padding-top: rem(40);
     color: $black;
     font-weight: bold;
     // padding-top: rem(50);
@@ -176,6 +208,61 @@ padding-top: rem(31);
     text-align: left;
 }
 }
+.p-card__title-01{
+  padding-left: rem(20);  
+  position: relative;  
+}
+.p-card__title-01::after{
+    position: absolute;
+    font-family: $font-family-Shelby;
+    color: $black;
+    font-size: rem(48);
+    top: 65%;
+    left: 0;
+    content: "01";
+    @include mq(md){
+        top: 60%;
+        left: 5%;
+        }
+        @include mq(sm){
+           left: 0; 
+            }
+}
+.p-card__title-02{
+  padding-left: rem(20);  
+  position: relative;  
+}
+.p-card__title-02::after{
+    position: absolute;
+    font-family: $font-family-Shelby;
+    color: $black;
+    font-size: rem(48);
+    top: 65%;
+    left: 10%;
+    content: "02";
+    @include mq(md){
+        top: 60%;
+        left: 5%;
+    }
+}
 
-
-
+.p-card__title-03{
+    padding-left: rem(10);  
+    position: relative;  
+  }
+  .p-card__title-03::after{
+      position: absolute;
+      font-family: $font-family-Shelby;
+      color: $black;
+      font-size: rem(48);
+      top: 65%;
+      left: 0;
+      content: "03";
+      @include mq(md){
+        top: 60%;
+        left: 5%;
+        }
+        @include mq(sm){
+           left: 0; 
+            }
+  }
